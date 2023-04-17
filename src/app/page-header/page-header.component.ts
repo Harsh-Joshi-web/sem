@@ -1,15 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import {LoginService} from '../login/loginServices'
 import { Router } from '@angular/router';
 import { NavigationStart } from '@angular/router';
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-page-header',
+  templateUrl: './page-header.component.html',
+  styleUrls: ['./page-header.component.css']
 })
-export class AppComponent {
-  title = 'sem';
-menuClicked: any;
-showHead:boolean=true;
+export class PageHeaderComponent {
+  @Output() menuClicked = new EventEmitter<boolean>();
+  showHead:boolean=true;
 
   constructor(private router:Router){
 
@@ -29,9 +29,8 @@ showHead:boolean=true;
 
         }
 
+      }
+
+    }); }
+
 }
-
-}); }
-}
-
-

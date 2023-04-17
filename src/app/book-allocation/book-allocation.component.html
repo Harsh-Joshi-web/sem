@@ -1,0 +1,30 @@
+<mat-accordion>
+    <mat-expansion-panel disabled expanded>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <h2>Book Details</h2>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+        <div class="container">
+            <form [formGroup]="bAllotForm" (ngSubmit)="bAllotSubmitted()" method="get">
+                <div class="row" style="width:100%">
+                    <div class="col">
+                        <label for="exampleInputEmail1" >Book Name</label>
+                        <input type="text" class="form-control" formControlName="bId" placeholder="Book Name" aria-label="First name">
+                    </div>
+                    <div class="col">
+                        <label for="exampleInputEmail1" >Student Name</label>
+                        <input type="text" class="form-control" formControlName="sId" placeholder="Student Name" aria-label="Last name">
+                    </div>
+                    <div class="col">
+                        <label for="exampleInputEmail1" >University Name</label>
+                        <input type="text" class="form-control" formControlName="uId" placeholder="University Name" aria-label="Last name">
+                    </div>
+                </div>
+                <div style="margin-top: 10px; margin-left: 45%;">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </mat-expansion-panel>
+</mat-accordion>
